@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="key_handler" name="key_handler_node" type="key_handler_node"/>
+  <node pkg="waypoint_saver" name="waypoint_saver_node" type="waypoint_saver_node"/>
+</launch>
