@@ -52,7 +52,7 @@ void KeyCallback(std_msgs::Int32 data) {
       }
       else if(key == 0x0a && node_num != "") {
         int check = std::stoi(node_num);
-        if(check < 0 || check > 50){
+        if(check < 0 || check > 150){
           node_num = "";
           ROS_INFO("Node number is out of selection.");
           ROS_INFO("Clear input buffer.");
@@ -90,7 +90,7 @@ void KeyCallback(std_msgs::Int32 data) {
       }
       else if(key == 0x0a && node_num != "") {
         int check = std::stoi(node_num);
-        if(check < 0 || check > 50){
+        if(check < 0 || check > 150){
           node_num = "";
           ROS_INFO("Node number is out of selection.");
           ROS_INFO("Clear input buffer.");
@@ -142,11 +142,16 @@ void KeyCallback(std_msgs::Int32 data) {
         }
       }
       else {
-        ROS_INFO("Reset to hit 'c'. Save to hit 's'.");
+        ROS_INFO("[c] : To reset all buffer.");
+        ROS_INFO("[s] : To save the waypoint.");
+        ROS_INFO("[b] : To pop the latest waypoint.");
       }
       break;
     }
   }
+  ROS_INFO("[c] : To reset all buffer.");
+  ROS_INFO("[s] : To save the waypoint.");
+  ROS_INFO("[b] : To pop the latest waypoint.");
 }
 
 /**

@@ -42,3 +42,4 @@ class Waypoint_data{
     std::vector<geometry_msgs::PoseStamped> waypoints_;
     std::string fname_;
 };
+
